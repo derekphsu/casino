@@ -2,7 +2,7 @@ class CreateCasinos < ActiveRecord::Migration[6.0]
   def change
     create_table :casinos do |t|
       t.string :name
-      t.text :location
+      t.string :location
 
       t.timestamps
     end
