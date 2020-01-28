@@ -1,0 +1,2 @@
+class CasinoGameJoin < ApplicationRecord
+end

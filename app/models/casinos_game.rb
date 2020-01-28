@@ -1,0 +1,2 @@
+class CasinosGame < ApplicationRecord
+end
