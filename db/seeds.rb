@@ -14,8 +14,6 @@ Game.create([{name: "poker",      game_type: "cards"},
              {name: "blackjack",  game_type: "cards"},
              {name: "craps",      game_type: "dice"}])
 Player.create(name: "Derek Hsu")
-Loyalty.create([{player_id: 1, casino_id: 1}, 
-                {player_id: 1, casino_id: 2}])
 BetHistory.create(casino_id: 1, game_id: 1, user_id: 1, betsize: 5.00, profit: 0)
 CasinosGames.create([{casino_id: 1, game_id: 1},
                      {casino_id: 1, game_id: 2},
