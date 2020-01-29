@@ -1,2 +1,0 @@
-class CasinoGameJoin < ApplicationRecord
-end

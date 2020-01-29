@@ -1,2 +1,0 @@
-class CasinosGame < ApplicationRecord
-end

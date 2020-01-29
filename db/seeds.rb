@@ -10,6 +10,16 @@
 Casino.create([{name: "Bellagio",         location: "Vegas"}, 
                {name: "Tommy's Backroom", location: "SF"}, 
                {name: "Pearl of Macau",   location: "Macau"}])
-Games.create([{name: "poker", type: "cards"},
-              {name: "blackjack", type: "cards"},
-              {name: "craps", type: "dice"}])
+Game.create([{name: "poker",      game_type: "cards"},
+             {name: "blackjack",  game_type: "cards"},
+             {name: "craps",      game_type: "dice"}])
+Player.create(name: "Derek Hsu")
+Loyalty.create([{player_id: 1, casino_id: 1}, 
+                {player_id: 1, casino_id: 2}])
+Hand.create(casino_id: 1, game_id: 1)
+
+# CasinoTransaction player_id:integer casino_id:integer hand_id:integer earning:integer
+
+
+
+# rails generate model CasinoTransaction player_id:integer casino_id:integer hand_id:integer earning:integer

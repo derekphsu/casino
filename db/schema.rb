@@ -10,18 +10,54 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_28_194344) do
+ActiveRecord::Schema.define(version: 2020_01_28_234414) do
+
+  create_table "casino_transactions", force: :cascade do |t|
+    t.integer "player_id"
+    t.integer "casino_id"
+    t.integer "hand_id"
+    t.integer "earning"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "casinos", force: :cascade do |t|
     t.string "name"
-    t.text "location"
+    t.string "location"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "casinos_games", force: :cascade do |t|
+    t.integer "casino_id"
+    t.integer "game_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "games", force: :cascade do |t|
     t.string "name"
-    t.string "type"
+    t.string "game_type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "hands", force: :cascade do |t|
+    t.integer "casino_id"
+    t.integer "game_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "loyalties", force: :cascade do |t|
+    t.integer "player_id"
+    t.integer "casino_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "players", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
