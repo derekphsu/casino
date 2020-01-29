@@ -1,0 +1,2 @@
+class PlayerBalance < ApplicationRecord
+end

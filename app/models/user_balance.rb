@@ -1,2 +1,0 @@
-class UserBalance < ApplicationRecord
-end
