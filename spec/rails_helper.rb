@@ -60,7 +60,7 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 
   config.before(:suite) do
-    Rails.application.load_seed # loading seeds
+    
+    # Rails.application.load_seed # loading seeds
   end
-
 end
