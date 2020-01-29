@@ -1,0 +1,2 @@
+class BetHistory < ApplicationRecord
+end
