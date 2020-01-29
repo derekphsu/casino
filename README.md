@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+readme
 
-Things you may want to cover:
+There are many Casinos
+There are many Games (poker, blackjack, etc)
+Each game has many casinos and each casino has many games.  They are related via a join table
 
-* Ruby version
+PlayerBalance allows the player to find out the balance they have at each casino
 
-* System dependencies
+BetHistory tracks each bet made by each player and the result.  creating this row will also update the PlayerBalance
 
-* Configuration
+PlayerTransacations will record deposits and withdrawls by the player.  Creating this will also update PlayerBalance
 
-* Database creation
+The advantage of having a separate player balance is that the player can have a easy access to the balance he has at each casino. If there is any discrepancies with the balance, all the records are not destroyed so we can have an easier time identifying the bug in our system and resolve the balance issue.
 
-* Database initialization
+Casino Transactions records whether the casino made money for lost money for each bet.  This will give an accurate snapshot of the profit and loss the casino has. This is not to be confused with BetHistory as the casino has no stake in some games like poker.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
